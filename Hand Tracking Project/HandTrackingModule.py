@@ -30,8 +30,19 @@ while True:
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
+
+    # adding fps using .putText 
     cv2.putText(img, str(int(fps)), (10, 70),
-                cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 3, (255, 0, 255), 3)
+                cv2.FONT_ITALIC, 3, (235, 52, 88), 3)
     cv2.imshow("Image", img)
     cv2.waitKey(1)
-     
+
+def main():
+    pTime = 0
+    cTime = 0
+    while True:
+        success, img = cap.read()
+        
+
+if __name__ == '__main__:':
+    main()
